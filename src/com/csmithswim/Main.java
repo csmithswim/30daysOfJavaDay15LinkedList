@@ -27,11 +27,21 @@ class Node {
 public class Main {
 
     public static  Node insert(Node head,int data) {
-        //Complete this method
-//        head.data=data;
-        LinkedList<Node> newLinkedList = new LinkedList<Node>();
-        newLinkedList.add(null, d=data);
-        return head;
+        {
+//Complete this method
+            if(head == null)
+                return new Node( data);
+            else if(head.next == null){
+                head.next = new Node(data);
+            }
+            else{
+                insert(head.next,data);
+            }
+
+
+            return head;
+
+        }
     }
 
     public static void display(Node head) {
